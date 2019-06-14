@@ -1,0 +1,21 @@
+What have I learned
+13.06
+
+1) alias for template:
+using Ptr = std::shared_ptr<T>;
+    Ptr<int> p;
+
+2) template method implementation signature:
+template<class T>
+shared_ptr<T>::shared_ptr() 
+
+3) How to see content of shared lib:
+nm -D --defined-only
+
+How to see shared lib dependencies:
+ldd
+
+4) If you compile class template as shared library, you need to have precompiled instantiations OR definition in header
+
+5) make install
+Do not use system include path for your libraries in internal-use-only sources (e.g. unit tests). You'll need to do make install every fucking time.
